@@ -1,19 +1,12 @@
+import { Link } from "react-router-dom";
+import Navigation from "./Navigation";
+import classes from './Header.module.css'
+
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <menu>
-          <li>
-            <a>About Me</a>
-          </li>
-          <li>
-            <a>Portfolio</a>
-          </li>
-          <li>
-            <a>Services</a>
-          </li>
-        </menu>
-      </nav>
+    <header style={{ backgroundColor: "pink" }}>
+      <Link to='/'>Logo</Link>
+      <Navigation />
     </header>
   );
 };

@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <footer>Footer</footer>;
+  return <footer style={{backgroundColor: 'green'}}>Footer</footer>;
 };
 
 export default Footer;
