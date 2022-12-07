@@ -1,0 +1,17 @@
+.header {
+  background-color: #212529;
+  display: flex;
+  padding-inline: 3.2em;
+  height: 10em;
+  align-items: center;
+
+  &--logo {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 1.8rem;
+      color: #acc8e5;
+      text-decoration-line: none;
+    }
+  }
+}

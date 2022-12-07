@@ -1,12 +1,18 @@
+import BriefIntroduction from "../components/homepage/BriefIntroduction";
+import Hero from "../components/homepage/Hero";
+
 const Homepage = () => {
-    return (
-        <>
-            <div>Hero section</div>
-            <div>Brief Introduction</div>
-            <div>Educations, Certificates, Programming Languages, Experience, Projects,...</div>
-            <div>Link to other pages</div>
-        </>
-    );
+  return (
+    <>
+      <Hero />
+      <BriefIntroduction />
+      <div>
+        Educations, Certificates, Programming Languages, Experience,
+        Projects,...
+      </div>
+      <div>Link to other pages</div>
+    </>
+  );
 };
 
 export default Homepage;

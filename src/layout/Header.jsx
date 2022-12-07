@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
-import classes from './Header.module.css'
+import classes from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header style={{ backgroundColor: "pink" }}>
-      <Link to='/'>Logo</Link>
+    <header className={classes.header}>
+      <Link className={classes["header--logo"]} to="/">
+        {"<Minh.dev>"}
+      </Link>
       <Navigation />
     </header>
   );

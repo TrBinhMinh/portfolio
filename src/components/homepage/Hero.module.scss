@@ -1,0 +1,7 @@
+.container {
+  height: calc(100vh - 10em);
+  background-image: url("../../assets/images/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1);
+}
