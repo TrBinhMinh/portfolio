@@ -1,11 +1,9 @@
-import classes from "./BriefIntroduction.module.scss";
+import classes from './LinksToOtherPages.module.scss'
 
-const BriefIntroduction = () => {
+const LinksToOtherPages = () => {
   return (
     <section className={classes.container}>
-      <h2 className={classes["container--heading"]}>
-        I'm Tran Binh Minh, software developer from Vietnam.
-      </h2>
+      <h2 className={classes["container--heading"]}>Links to other pages</h2>
       <p className={classes["container--content"]}>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas esse quo
         tempore distinctio incidunt excepturi, laboriosam neque, necessitatibus
@@ -16,4 +14,4 @@ const BriefIntroduction = () => {
   );
 };
 
-export default BriefIntroduction;
+export default LinksToOtherPages;

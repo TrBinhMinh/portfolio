@@ -3,5 +3,19 @@
   background-image: url("../../assets/images/hero-image.jpg");
   background-size: cover;
   background-position: center;
-  filter: grayscale(1);
+
+  &--heading-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    backdrop-filter: grayscale(1);
+    -webkit-backdrop-filter: grayscale(1);
+
+    &--heading {
+      font-size: 4.6rem;
+      color: #fff;
+      text-shadow: 1px 1px 2px black, 0 0 1em #acc8e5, 0 0 0.2em #acc8e5;
+    }
+  }
 }
