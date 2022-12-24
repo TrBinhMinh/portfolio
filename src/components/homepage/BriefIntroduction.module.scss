@@ -1,0 +1,12 @@
+.container {
+  text-align: center;
+  padding-inline: 15rem;
+
+  &--heading {
+    font-size: 3.2rem;
+  }
+
+  &--content {
+    font-size: 2rem;
+  }
+}
