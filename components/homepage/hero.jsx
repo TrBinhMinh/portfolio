@@ -1,5 +1,4 @@
-import HeroImage from "../../assets/images/hero-image.jpg";
-import classes from "./Hero.module.scss";
+import classes from "./hero.module.scss";
 
 const Hero = () => {
   return (

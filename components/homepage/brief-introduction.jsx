@@ -1,4 +1,4 @@
-import classes from "./BriefIntroduction.module.scss";
+import classes from "./brief-introduction.module.scss";
 
 const BriefIntroduction = () => {
   return (

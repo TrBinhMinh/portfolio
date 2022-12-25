@@ -1,4 +1,4 @@
-import classes from './LinksToOtherPages.module.scss'
+import classes from "./links-to-other-pages.module.scss";
 
 const LinksToOtherPages = () => {
   return (

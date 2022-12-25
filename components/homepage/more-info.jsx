@@ -1,4 +1,4 @@
-import classes from "./MoreInfo.module.scss";
+import classes from "./more-info.module.scss";
 
 const MoreInfo = () => {
   return (

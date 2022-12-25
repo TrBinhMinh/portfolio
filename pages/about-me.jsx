@@ -18,7 +18,6 @@ const AboutMe = () => {
           laboriosam iure perferendis mollitia blanditiis.
         </p>
       </section>
-      
     </article>
   );
 };
