@@ -1,15 +1,35 @@
 import Link from "next/link";
+import Icon from "../ui/icon";
 import classes from "./footer.module.scss";
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      icon: "facebook",
+      link: "https://www.facebook.com/binhminh.tran.589",
+    },
+    {
+      icon: "linkedin",
+      link: "https://www.linkedin.com/in/minh-tran-a5667a210/",
+    },
+    {
+      icon: "github",
+      link: "https://github.com/TrBinhMinh",
+    },
+  ];
+
   return (
     <footer className={classes.container}>
       <div>
         <Link className={classes.logo} href="/">
           &lt;Minh.dev&gt;
         </Link>
-        <div>
-          <span>Social media:</span> <a href="#">Social media</a>
+        <div className={classes["social-links"]}>
+          {socialLinks.map((link) => (
+            <a href={link.link} key={link.icon}>
+              <Icon iconName={link.icon} />
+            </a>
+          ))}
         </div>
       </div>
       <address>
