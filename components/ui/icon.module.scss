@@ -1,4 +1,9 @@
 .icon {
   color: #fff;
   font-size: 2.4rem;
+  transition: all ease-out 300ms;
+
+  &:hover {
+    color: #acc8e5;
+  }
 }

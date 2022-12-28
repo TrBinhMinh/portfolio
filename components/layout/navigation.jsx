@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import BaseButton from "../ui/base-button";
 
 import classes from "./navigation.module.scss";
 
@@ -30,9 +31,13 @@ const Navigation = () => {
           </Link>
         ))}
       </menu>
-      <Link className={classes["btn-contact"]} href="/contact">
+      <BaseButton
+        buttonType="link"
+        className={classes["btn-contact"]}
+        href="/contact"
+      >
         Contact Us
-      </Link>
+      </BaseButton>
     </nav>
   );
 };

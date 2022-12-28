@@ -35,22 +35,6 @@
   }
 
   .btn-contact {
-    font-size: 1.6rem;
-    color: #0b7285;
-    font-weight: 600;
-    display: inline-block;
-    text-decoration-line: none;
     margin-left: auto;
-    background-color: #dee9f5;
-    padding: 0.2em 0.8em;
-    border-radius: 6px;
-    transition: all 0.3s ease-in;
-
-    &:hover,
-    &:active {
-      // color: #333;
-      background-color: #fff;
-      transform: scale(1.05);
-    }
   }
 }

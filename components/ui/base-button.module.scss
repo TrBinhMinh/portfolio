@@ -1,0 +1,18 @@
+.btn {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #0b7285;
+  font-weight: 600;
+  text-decoration-line: none;
+  background-color: #dee9f5;
+  padding: 0.4rem 1.6rem;
+  max-width: 12.8rem;
+  border-radius: 6px;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:active {
+    background-color: #fff;
+    transform: scale(1.05);
+  }
+}
