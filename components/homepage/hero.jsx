@@ -12,7 +12,6 @@ const Hero = () => {
           fill
           priority
           alt="A screen of website/application development code."
-          placeholder="blur"
         />
         <div
           className={classes["container--heading-box--backdrop-filter"]}
