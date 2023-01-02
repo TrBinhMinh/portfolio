@@ -1,12 +1,20 @@
 .container {
   text-align: center;
   padding-inline: 15rem;
+  margin-bottom: 4.2rem;
+
+  &--icon {
+    font-size: 4.2rem;
+    margin-inline: auto;
+  }
 
   &--heading {
     font-size: 3.2rem;
+    margin-bottom: 1.2rem;
   }
 
   &--content {
     font-size: 2rem;
+    line-height: 1.5;
   }
 }

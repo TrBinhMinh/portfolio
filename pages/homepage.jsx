@@ -1,18 +1,7 @@
-import { Fragment } from "react";
-import BriefIntroduction from "/components/homepage/brief-introduction";
-import Hero from "/components/homepage/hero";
-import LinksToOtherPages from "/components/homepage/links-to-other-pages";
-import MoreInfo from "/components/homepage/more-info";
+import Homepage from "../components/homepage/homepage";
 
-const Homepage = () => {
-  return (
-    <Fragment>
-      <Hero />
-      <BriefIntroduction />
-      <MoreInfo />
-      <LinksToOtherPages />
-    </Fragment>
-  );
+const HomepagePage = () => {
+  return <Homepage />;
 };
 
-export default Homepage;
+export default HomepagePage;

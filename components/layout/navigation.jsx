@@ -10,7 +10,7 @@ const Navigation = () => {
   const navigations = [
     { name: "Homepage", route: "/homepage" },
     { name: "About Me", route: "/about-me" },
-    { name: "Portfolio", route: "/portfolio" },
+    // { name: "Portfolio", route: "/portfolio" },
     { name: "Contact", route: "/contact" },
   ];
 
