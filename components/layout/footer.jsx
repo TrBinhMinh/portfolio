@@ -53,11 +53,10 @@ const Footer = () => {
         </h3>
         <div className={classes["section-info-address--email"]}>
           <span>Email:</span>{" "}
-          <a href="mailto:bminh9900@gmail.com">bminh9900@gmail.com</a>
+          <a href="mailto:tbminh2309@gmail.com">tbminh2309@gmail.com</a>
         </div>
         <div className={classes["section-info-address--numbers"]}>
-          <span>Phone number:</span>{" "}
-          <a href="tel:+84338824186">(+84) 338-824-186</a>
+          <span>Phone number:</span> <a href="#">#</a>
         </div>
       </address>
       <form className={classes["section-cta"]} onSubmit={submitHandler}>
