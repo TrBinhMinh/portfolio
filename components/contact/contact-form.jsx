@@ -71,6 +71,15 @@ const ContactForm = () => {
                   required={name !== "linkedin"}
                 />
               )}
+              {name === "message" && (
+                <textarea
+                  className={classes["form--container--box--text-area"]}
+                  id={name}
+                  name={name}
+                  placeholder={placeholder}
+                  required={name !== "linkedin"}
+                />
+              )}
             </div>
           );
         })}
