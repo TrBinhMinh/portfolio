@@ -54,21 +54,23 @@ const ContactForm = () => {
           }
 
           return (
-            <div className={classes["form--container--box"]}>
+            <div className={classes["form--container--box"]} key={name}>
               <div className={classes["form--container--box--label"]}>
                 {icon}
                 <label className={classes["form--container--box--label--text"]}>
                   {`Your ${name.at(0).toUpperCase()}${name.slice(1)}`}
                 </label>
               </div>
-              <input
-                className={classes["form--container--box--input"]}
-                type={type}
-                id={name}
-                name={name}
-                placeholder={placeholder}
-                required={name !== "linkedin"}
-              />
+              {name !== "message" && (
+                <input
+                  className={classes["form--container--box--input"]}
+                  type={type}
+                  id={name}
+                  name={name}
+                  placeholder={placeholder}
+                  required={name !== "linkedin"}
+                />
+              )}
             </div>
           );
         })}
