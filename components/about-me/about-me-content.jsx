@@ -10,6 +10,7 @@ const AboutMeContent = () => {
         className={classes["container--picture"]}
         src={myPicture}
         width={300}
+        alt="Picture of me"
       />
       <p className={classes["container--content"]}>
         This is Minh Tran, a front-end developer from VietNam. I started my
