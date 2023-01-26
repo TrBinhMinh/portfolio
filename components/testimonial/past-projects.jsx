@@ -118,7 +118,11 @@ const PastProjects = () => {
                 className={
                   classes["container--project-list--project--slider--btn-left"]
                 }
-                onClick={goToSlide.bind(null, "prev", project.screenshots.length - 1)}
+                onClick={goToSlide.bind(
+                  null,
+                  "prev",
+                  project.screenshots.length - 1
+                )}
               >
                 &larr;
               </button>
@@ -126,7 +130,11 @@ const PastProjects = () => {
                 className={
                   classes["container--project-list--project--slider--btn-right"]
                 }
-                onClick={goToSlide.bind(null, "next", project.screenshots.length - 1)}
+                onClick={goToSlide.bind(
+                  null,
+                  "next",
+                  project.screenshots.length - 1
+                )}
               >
                 &rarr;
               </button>
