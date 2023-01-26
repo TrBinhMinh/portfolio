@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState } from "react";
 import classes from "./past-projects.module.scss";
 
 import logisticImg1 from "/public/images/portfolio-images/logistic-project/dimerco-screenshot-1.jpg";
@@ -51,6 +52,27 @@ const projectList = [
 ];
 
 const PastProjects = () => {
+  const [curSlide, setCurSlide] = useState(0);
+
+  const goToSlide = (direction, sliderLength) => {
+    switch (direction) {
+      case "next":
+        setCurSlide((prevSlide) => {
+          if (prevSlide === sliderLength) return 0;
+          return prevSlide + 1;
+        });
+        break;
+      case "prev":
+        setCurSlide((prevSlide) => {
+          if (prevSlide === 0) return sliderLength;
+          return prevSlide - 1;
+        });
+        break;
+      default:
+        console.error("Slider functionality went wrong!");
+    }
+  };
+
   return (
     <section className={classes.container}>
       <h2 className={classes["container--heading"]}>My Past Projects</h2>
@@ -72,19 +94,16 @@ const PastProjects = () => {
             </p>
             <div
               className={classes["container--project-list--project--slider"]}
-              style={
-                {
-                  // transform: "scale(0.2) translateX(-800px)",
-                }
-              }
+              // style={{transform: 'scale(0.2)'}}
             >
               {project.screenshots?.map((screenshot, index) => (
                 <div
+                  key={index}
                   className={
                     classes["container--project-list--project--slider--slide"]
                   }
                   style={{
-                    transform: `translateX(${100 * index}%)`,
+                    transform: `translateX(${100 * (index - curSlide)}%)`,
                   }}
                 >
                   <Image
@@ -99,6 +118,7 @@ const PastProjects = () => {
                 className={
                   classes["container--project-list--project--slider--btn-left"]
                 }
+                onClick={goToSlide.bind(null, "prev", project.screenshots.length - 1)}
               >
                 &larr;
               </button>
@@ -106,6 +126,7 @@ const PastProjects = () => {
                 className={
                   classes["container--project-list--project--slider--btn-right"]
                 }
+                onClick={goToSlide.bind(null, "next", project.screenshots.length - 1)}
               >
                 &rarr;
               </button>
