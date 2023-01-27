@@ -1,13 +1,38 @@
-const Slider = () => {
+import Image from "next/image";
+import { useState } from "react";
+import classes from "./slider.module.scss";
+
+const Slider = ({ screenshots }) => {
+  const [curSlide, setCurSlide] = useState(0);
+
+  const goToSlide = (direction, sliderLength) => {
+    switch (direction) {
+      case "next":
+        setCurSlide((prevSlide) => {
+          if (prevSlide === sliderLength) return 0;
+          return prevSlide + 1;
+        });
+        break;
+      case "prev":
+        setCurSlide((prevSlide) => {
+          if (prevSlide === 0) return sliderLength;
+          return prevSlide - 1;
+        });
+        break;
+      default:
+        console.error("Slider functionality went wrong!");
+    }
+  };
+
   return (
     <div
-      className={classes["container--project-list--project--slider"]}
+      className={classes.slider}
       // style={{transform: 'scale(0.2)'}}
     >
-      {project.screenshots?.map((screenshot, index) => (
+      {screenshots?.map((screenshot, index) => (
         <div
           key={index}
-          className={classes["container--project-list--project--slider--slide"]}
+          className={classes["slider--slide"]}
           style={{
             transform: `translateX(${100 * (index - curSlide)}%)`,
           }}
@@ -21,18 +46,14 @@ const Slider = () => {
       ))}
 
       <button
-        className={
-          classes["container--project-list--project--slider--btn-left"]
-        }
-        onClick={goToSlide.bind(null, "prev", project.screenshots.length - 1)}
+        className={classes["slider--btn-left"]}
+        onClick={goToSlide.bind(null, "prev", screenshots.length - 1)}
       >
         &larr;
       </button>
       <button
-        className={
-          classes["container--project-list--project--slider--btn-right"]
-        }
-        onClick={goToSlide.bind(null, "next", project.screenshots.length - 1)}
+        className={classes["slider--btn-right"]}
+        onClick={goToSlide.bind(null, "next", screenshots.length - 1)}
       >
         &rarr;
       </button>
