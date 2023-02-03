@@ -9,10 +9,9 @@ const BriefIntroduction = () => {
         I'm Tran Binh Minh, a software developer from Vietnam.
       </h2>
       <p className={classes["container--content"]}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas esse quo
-        tempore distinctio incidunt excepturi, laboriosam neque, necessitatibus
-        eaque, cupiditate iste aperiam et quod! Modi officia aperiam expedita
-        est et.
+        This is Minh Tran, a front-end developer from VietNam. I started my
+        career 3 years ago with the love of changing the world through
+        technology, by learning coding via the Internet, by myself...
       </p>
     </section>
   );

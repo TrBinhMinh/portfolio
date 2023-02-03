@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import Hero from "./hero";
 import BriefIntroduction from "./brief-introduction";
 import MoreInfo from "./more-info";
-import LinksToOtherPages from "./links-to-other-pages";
+// import LinksToOtherPages from "./links-to-other-pages";
 
 const Homepage = () => {
   return (
@@ -10,7 +10,7 @@ const Homepage = () => {
       <Hero />
       <BriefIntroduction />
       <MoreInfo />
-      <LinksToOtherPages />
+      {/* <LinksToOtherPages /> */}
     </Fragment>
   );
 };
