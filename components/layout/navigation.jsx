@@ -35,6 +35,7 @@ const Navigation = () => {
           [classes["container--nav"]]: true,
           [classes["nav-open"]]: isOpened,
         })}
+        onClick={clickHandler}
       >
         {navigations.map((nav) => (
           <Link
@@ -52,6 +53,7 @@ const Navigation = () => {
       </menu>
       <NavMenu
         onClick={clickHandler}
+        isOpened={isOpened}
         className={classes["container--nav-menu"]}
       />
       <BaseButton

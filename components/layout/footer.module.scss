@@ -81,3 +81,25 @@
     }
   }
 }
+
+@media (max-width: 50em) {
+  .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1.6rem;
+
+    .section-main {
+      align-items: center;
+    }
+
+    .section-info-address {
+      justify-self: inherit;
+      align-items: center;
+    }
+
+    .section-cta {
+      justify-self: inherit;
+      align-items: center;
+    }
+  }
+}
