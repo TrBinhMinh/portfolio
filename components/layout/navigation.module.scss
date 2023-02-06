@@ -2,6 +2,11 @@
   display: flex;
   flex-grow: 1;
 
+  &--nav-background,
+  &--nav-menu {
+    display: none;
+  }
+
   &--nav {
     margin-left: auto;
     font-size: 1.6rem;
@@ -36,5 +41,77 @@
 
   .btn-contact {
     margin-left: auto;
+  }
+}
+
+@media (max-width: 50em) {
+  .container {
+    &--nav-background,
+    &--nav-menu {
+      display: block;
+      z-index: 1;
+    }
+
+    &--nav-menu {
+      margin-left: auto;
+    }
+
+    &--nav-background {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 200ms;
+    }
+
+    .background-open {
+      opacity: 1;
+      pointer-events: visible;
+    }
+
+    &--nav {
+      font-size: 2rem;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 1;
+      transform: translateX(60%);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 200ms ease-in;
+
+      &::after {
+        content: none;
+      }
+
+      .link,
+      .link:hover,
+      .link:active,
+      .active-link {
+        color: #333;
+        font-weight: 600;
+        transform: none;
+      }
+    }
+
+    .nav-open {
+      transform: translateX(0%);
+      opacity: 1;
+      pointer-events: visible;
+    }
+  }
+
+  .btn-contact {
+    display: none;
   }
 }

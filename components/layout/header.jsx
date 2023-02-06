@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navigation from "./navigation";
+
 import classes from "./header.module.scss";
 
 const Header = () => {

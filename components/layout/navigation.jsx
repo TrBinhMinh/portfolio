@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import BaseButton from "../ui/base-button";
+import NavMenu from "../ui/nav-menu";
+import classNames from "classnames";
 
 import classes from "./navigation.module.scss";
 
 const Navigation = () => {
   const { pathname } = useRouter();
+  const [isOpened, setIsOpened] = useState(false);
 
   const navigations = [
     { name: "Homepage", route: "/homepage" },
@@ -14,9 +18,24 @@ const Navigation = () => {
     { name: "Contact", route: "/contact" },
   ];
 
+  const clickHandler = () => {
+    setIsOpened((prevState) => !prevState);
+  };
+
   return (
     <nav className={classes.container}>
-      <menu className={classes["container--nav"]}>
+      <div
+        className={classNames({
+          [classes["container--nav-background"]]: true,
+          [classes["background-open"]]: isOpened,
+        })}
+      ></div>
+      <menu
+        className={classNames({
+          [classes["container--nav"]]: true,
+          [classes["nav-open"]]: isOpened,
+        })}
+      >
         {navigations.map((nav) => (
           <Link
             key={nav.name}
@@ -31,6 +50,10 @@ const Navigation = () => {
           </Link>
         ))}
       </menu>
+      <NavMenu
+        onClick={clickHandler}
+        className={classes["container--nav-menu"]}
+      />
       <BaseButton
         buttonType="link"
         className={classes["btn-contact"]}
