@@ -1,6 +1,6 @@
 .container {
   text-align: center;
-  padding-inline: 15rem;
+  padding-inline: min(10%, 15rem);
   margin-bottom: 4.2rem;
 
   &--icon {

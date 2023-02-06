@@ -12,6 +12,7 @@ const Hero = () => {
           fill
           priority
           alt="A screen of website/application development code."
+          objectFit="cover"
         />
         <div
           className={classes["container--heading-box--backdrop-filter"]}
