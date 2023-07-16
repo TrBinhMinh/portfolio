@@ -12,10 +12,10 @@ const Navigation = () => {
   const [isOpened, setIsOpened] = useState(false);
 
   const navigations = [
-    { name: "Homepage", route: "/homepage" },
-    { name: "About Me", route: "/about-me" },
-    { name: "Testimonial", route: "/testimonial" },
-    { name: "Contact", route: "/contact" },
+    { name: "Home", route: "/homepage" },
+    { name: "Works", route: "/testimonial" },
+    { name: "About", route: "/about-me" },
+    { name: "Blogs", route: "/contact" },
   ];
 
   const clickHandler = () => {
@@ -47,7 +47,7 @@ const Navigation = () => {
             }
             href={nav.route}
           >
-            {nav.name}
+            {nav.name?.toUpperCase()}
           </Link>
         ))}
       </menu>

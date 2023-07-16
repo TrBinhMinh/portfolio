@@ -1,9 +1,10 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
   async redirects() {
     return [
       {
-        source: "/",
-        destination: "/homepage",
+        source: '/',
+        destination: '/homepage',
         permanent: true,
       },
     ];
