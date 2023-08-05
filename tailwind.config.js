@@ -10,12 +10,16 @@ module.exports = {
   ],
   theme: {
     colors: {
-      primary: '#FCFCFC',
-      secondary: '#738EFA',
+      primary: '#2D42FF',
+      secondary: '#7389FA',
+      text: '#FCFCFC',
       'bg-main': '#0C0B0E',
+      asterisk: '#E63B1D',
+      'gradiant-start': '#2F7EE4',
+      'gradiant-end': '#5361FA',
     },
     fontFamily: {
-      sans: ['Graphik', 'sans-serif'],
+      Montserrat: ['Graphik', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
     },
     extend: {
