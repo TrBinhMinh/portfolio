@@ -7,13 +7,6 @@ const Hero = () => {
   return (
     <section className={classes.container}>
       <div className={classes["container--heading-box"]}>
-        <Image
-          src={bgImg}
-          fill
-          priority
-          alt="A screen of website/application development code."
-          objectFit="cover"
-        />
         <div
           className={classes["container--heading-box--backdrop-filter"]}
         ></div>
