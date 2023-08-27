@@ -12,7 +12,7 @@ const pages = [
 
 const Header = () => {
   return (
-    <header className="grid grid-cols-3 mt-13 2xl:mx-66 xl:mx-40 bg-bg-main">
+    <header className="grid grid-cols-3 mt-13 xl:mx-40 bg-bg-main">
       <Link className="text-txt-color text-2xl justify-self-start" href="/">
         M.dev
       </Link>

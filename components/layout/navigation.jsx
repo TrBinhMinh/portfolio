@@ -18,37 +18,50 @@ const Navigation = ({ className, pages }) => {
     <nav className={classNames('flex', className)}>
       <div
         aria-label="menu toggle for mobile"
-        className={classNames(classes['container--nav-background'], {
-          [classes['background-open']]: isOpened,
-        })}
+        className={classNames(
+          'md:hidden',
+          isOpened ? ['opacity-100', 'pointer-events-auto'] : ''
+        )}
       ></div>
       <menu
-        className={classNames('text-base', 'flex', 'gap-12', {
-          [classes['nav-open']]: isOpened,
-        })}
+        className={classNames(
+          'text-base',
+          'flex',
+          'flex-col',
+          'gap-12',
+          'items-center',
+          'fixed',
+          'inset-0',
+          'opacity-100',
+          '-translate-y-2/3',
+          'pointer-events-none',
+          'md:flex-row',
+          'md:translate-x-0',
+          'md:static',
+          'md:pointer-events-auto',
+          isOpened
+            ? ['opacity-100', '-translate-y-0', 'pointer-events-auto']
+            : ''
+        )}
         onClick={clickHandler}
       >
         {pages.map((nav) => {
           const linkStyle = classNames(
             pathname === nav.route
-              ? [
-                  'text-secondary',
-                  'after:content-[""]',
-                  'after:w-1.5',
-                  'after:h-1.5',
-                  'after:mx-auto',
-                  'after:block',
-                  'after:rounded-full',
-                  'after:bg-secondary',
-                ]
+              ? ['text-secondary', 'after:bg-secondary']
               : 'text-txt-color',
+            'after:content-[""]',
+            'after:block',
+            'after:w-1.5',
+            'after:h-1.5',
+            'after:mx-auto',
+            'after:rounded-full',
             'font-bold',
             'inline-block',
             'no-underline',
             'ease-in duration-200',
             'text-base',
-            'hover:text-secondary',
-            'active:text-secondary'
+            'hover:text-secondary'
           );
 
           return (
