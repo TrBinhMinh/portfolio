@@ -13,6 +13,7 @@ module.exports = {
       primary: '#2D42FF',
       secondary: '#7389FA',
       'txt-color': '#FCFCFC',
+      'secondary-color': '#EEEEEE',
       'bg-main': '#0C0B0E',
       asterisk: '#E63B1D',
       'gradiant-start': '#2F7EE4',
