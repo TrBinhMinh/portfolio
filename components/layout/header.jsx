@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header
       className={classNames(
-        'fixed p-5 z-10 inset-0 grid grid-cols-2 xl:mx-40 md:static md:p-0 md:grid-cols-3 md:mt-13',
+        'fixed p-5 z-10 inset-0 grid grid-cols-2 2xl:mx-68 lg:mx-52 md:static md:p-0 md:grid-cols-3 md:mt-13',
         isOpened ? 'backdrop-blur-2xl' : ''
       )}
     >
