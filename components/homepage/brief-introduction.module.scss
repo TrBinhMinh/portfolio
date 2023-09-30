@@ -1,20 +1,6 @@
-.container {
-  text-align: center;
-  padding-inline: min(10%, 15rem);
-  margin-bottom: 4.2rem;
-
-  &--icon {
-    font-size: 4.2rem;
-    margin-inline: auto;
-  }
-
-  &--heading {
-    font-size: 3.2rem;
-    margin-bottom: 1.2rem;
-  }
-
-  &--content {
-    font-size: 2rem;
-    line-height: 1.5;
-  }
+.text-shadow {
+  opacity: 0.2;
+  text-shadow: 45px 19px var(--main-bg), 44px 18px #eee, 46px 18px #eee,
+    44px 20px #eee, 46px 20px #eee;
+  //   text-shadow: -1px -1px 0 #eee, 1px -1px 0 #eee, -1px 1px 0 #eee, 1px 1px 0 #eee;
 }

@@ -16,8 +16,8 @@ module.exports = {
       'secondary-color': '#EEEEEE',
       'bg-main': '#0C0B0E',
       asterisk: '#E63B1D',
-      'gradiant-start': '#2F7EE4',
-      'gradiant-end': '#5361FA',
+      'gradient-start': '#2F7EE4',
+      'gradient-end': '#5361FA',
     },
     fontFamily: {
       Montserrat: ['Graphik', 'sans-serif'],
@@ -30,6 +30,9 @@ module.exports = {
         68: '17rem',
         '8xl': '96rem',
         '9xl': '128rem',
+      },
+      fontSize: {
+        '5.5xl': '3.375rem'
       },
       borderRadius: {
         '4xl': '2rem',

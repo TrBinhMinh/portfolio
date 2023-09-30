@@ -18,7 +18,7 @@ const Hero = () => {
           </h1>
         </div>
         <p className={mainHeadingStylings}>
-          a <span className="">software</span> developer
+          a <span className="text-gradient-end">software</span> developer
         </p>
       </div>
     </section>

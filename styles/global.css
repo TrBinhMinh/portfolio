@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {}
+:root {
+  --main-bg: hsla(260, 12%, 5%, 1);
+}
 
 body {
-  background-color: #0c0b0e;
+  background-color: var(--main-bg);
 }
