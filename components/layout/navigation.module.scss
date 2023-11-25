@@ -12,30 +12,33 @@
     font-size: 1.6rem;
     display: flex;
     gap: 1.5em;
-    position: relative;
-
-    &::after {
-      content: "";
-      height: 2px;
-      width: 120%;
-      bottom: 0;
-      transform: translateX(-8%);
-      position: absolute;
-      background-color: #acc8e5;
-    }
 
     .link {
       display: inline-block;
-      color: #acc8e5;
+      line-height: 1.6;
+      color: var(--text);
+      font-weight: 700;
       text-decoration-line: none;
       transition: all 0.3s ease-in;
+      position: relative;
     }
 
     .link:hover,
     .link:active,
     .active-link {
-      color: #fff;
-      transform: translateY(-0.5rem);
+      color: var(--secondary);
+
+      &::after {
+        content: "";
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        bottom: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        background-color: var(--secondary);
+      }
     }
   }
 

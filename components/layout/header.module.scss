@@ -1,5 +1,5 @@
 .header {
-  background-color: #212529;
+  background-color: #0c0b0e;
   display: flex;
   padding-inline: 3.2em;
   height: 10em;
@@ -10,7 +10,7 @@
     &:visited {
       display: inline-block;
       font-size: 1.8rem;
-      color: #acc8e5;
+      color: var(--text);
       text-decoration-line: none;
     }
   }

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <Link className={classes["header--logo"]} href="/">
-        &lt;Minh.dev&gt;
+        M.dev
       </Link>
       <Navigation />
     </header>
