@@ -1,44 +1,39 @@
 .container {
   display: flex;
   flex-grow: 1;
+  gap: 1.5em;
 
   &--nav-background,
   &--nav-menu {
     display: none;
   }
 
-  &--nav {
-    margin-left: auto;
+  &--link {
     font-size: 1.6rem;
-    display: flex;
-    gap: 1.5em;
+    display: inline-block;
+    line-height: 1.6;
+    color: var(--text);
+    font-weight: 700;
+    text-decoration-line: none;
+    transition: all 0.3s ease-in;
+    position: relative;
+  }
 
-    .link {
-      display: inline-block;
-      line-height: 1.6;
-      color: var(--text);
-      font-weight: 700;
-      text-decoration-line: none;
-      transition: all 0.3s ease-in;
-      position: relative;
-    }
+  &--link:hover,
+  &--link:active,
+  .active-link {
+    color: var(--secondary);
 
-    .link:hover,
-    .link:active,
-    .active-link {
-      color: var(--secondary);
-
-      &::after {
-        content: "";
-        height: 6px;
-        width: 6px;
-        border-radius: 50%;
-        bottom: -1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        position: absolute;
-        background-color: var(--secondary);
-      }
+    &::after {
+      content: "";
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      background-color: var(--secondary);
     }
   }
 
@@ -97,9 +92,9 @@
         content: none;
       }
 
-      .link,
-      .link:hover,
-      .link:active,
+      &--link,
+      &--link:hover,
+      &--link:active,
       .active-link {
         color: #333;
         font-weight: 600;

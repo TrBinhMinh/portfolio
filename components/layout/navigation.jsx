@@ -1,68 +1,58 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import BaseButton from "../ui/base-button";
-import NavMenu from "../ui/nav-menu";
-import classNames from "classnames";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import classNames from 'classnames';
+import classes from './navigation.module.scss'
 
-import classes from "./navigation.module.scss";
-
-const Navigation = () => {
+const Navigation = ({ className, pages, isOpened, clickHandler }) => {
   const { pathname } = useRouter();
-  const [isOpened, setIsOpened] = useState(false);
-
-  const navigations = [
-    { name: "Home", route: "/homepage" },
-    { name: "Work", route: "/testimonial" },
-    { name: "About", route: "/about-me" },
-    { name: "Blog", route: "/contact" },
-  ];
-
-  const clickHandler = () => {
-    setIsOpened((prevState) => !prevState);
-  };
 
   return (
-    <nav className={classes.container}>
-      <div
-        className={classNames({
-          [classes["container--nav-background"]]: true,
-          [classes["background-open"]]: isOpened,
-        })}
-      ></div>
-      <menu
-        className={classNames({
-          [classes["container--nav"]]: true,
-          [classes["nav-open"]]: isOpened,
-        })}
-        onClick={clickHandler}
-      >
-        {navigations.map((nav) => (
-          <Link
-            key={nav.name}
-            className={
-              pathname === nav.route
-                ? `${classes.link} ${classes["active-link"]}`
-                : classes.link
-            }
-            href={nav.route}
-          >
-            {nav.name}
+    <nav
+      // className={classNames(
+      //   className,
+      //   'flex',
+      //   'flex-col',
+      //   'gap-16',
+      //   'items-center',
+      //   isOpened
+      //     ? ['opacity-100', 'translate-y-0', 'pointer-events-auto']
+      //     : ['opacity-0', '-translate-y-3/4', 'pointer-events-none'],
+      //   'md:flex-row',
+      //   'md:translate-y-0',
+      //   'md:static',
+      //   'md:opacity-100',
+      //   'md:pointer-events-auto',
+      //   'md:gap-12',
+      //   'ease-in duration-300'
+      // )}
+      className={classes.container}
+      onClick={clickHandler}
+    >
+      {pages.map((nav) => {
+        // const linkStyle = classNames(
+        //   pathname === nav.route
+        //     ? ['text-secondary', 'after:bg-secondary']
+        //     : 'text-txt-color',
+        //   'after:content-[""]',
+        //   'after:block',
+        //   'after:w-1.5',
+        //   'after:h-1.5',
+        //   'after:mx-auto',
+        //   'after:rounded-full',
+        //   'font-bold',
+        //   'inline-block',
+        //   'no-underline',
+        //   'ease-in duration-200',
+        //   'text-base',
+        //   'hover:text-secondary'
+        // );
+
+        return (
+          <Link key={nav.name} className={classes['container--link']} href={nav.route}>
+            {nav.name?.toUpperCase()}
           </Link>
-        ))}
-      </menu>
-      <NavMenu
-        onClick={clickHandler}
-        isOpened={isOpened}
-        className={classes["container--nav-menu"]}
-      />
-      <BaseButton
-        buttonType="link"
-        className={classes["btn-contact"]}
-        href="/contact"
-      >
-        Contact Us
-      </BaseButton>
+        );
+      })}
     </nav>
   );
 };

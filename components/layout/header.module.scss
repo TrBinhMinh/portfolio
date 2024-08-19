@@ -1,8 +1,10 @@
-.header {
+.container {
   background-color: #0c0b0e;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding-inline: 3.2em;
   height: 10em;
+  justify-items: center;
   align-items: center;
 
   &--logo {
@@ -12,6 +14,49 @@
       font-size: 1.8rem;
       color: var(--text);
       text-decoration-line: none;
+    }
+  }
+
+  &--nav-menu {
+    display: none;
+  }
+
+  &--cta-lang {
+    display: flex;
+    gap: 1rem;
+    color: var(--text);
+
+    &--lang-settings {
+      display: flex;
+      align-items: center;
+
+      &--txt {
+        font-size: 1.6rem;
+        color: var(--text);
+        margin-left: 1rem;
+      }
+
+      &--dropdown {
+        color: var(--text);
+      }
+    }
+
+    &--cta-btn {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--text);
+      border-radius: 20px;
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@media (max-width: 50em) {
+  .header {
+    &--nav-menu {
+      display: inline-block;
     }
   }
 }
