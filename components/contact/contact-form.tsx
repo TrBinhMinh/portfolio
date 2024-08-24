@@ -58,7 +58,7 @@ const ContactForm = () => {
               <div className={classes["form--container--box--label"]}>
                 {icon}
                 <label className={classes["form--container--box--label--text"]}>
-                  {`Your ${name.at(0).toUpperCase()}${name.slice(1)}`}
+                  {`Your ${(name.at(0) as string).toUpperCase()}${name.slice(1)}`}
                 </label>
               </div>
               {name !== "message" && (

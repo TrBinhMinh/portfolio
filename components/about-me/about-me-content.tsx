@@ -19,7 +19,7 @@ const AboutMeContent = () => {
         every time I figure out how to resolve a bug and I pay close attention
         to coding logic, and structure because I always believe that with a firm
         foundation, the quality is put at a higher level with scalability and
-        security. I consider myself lucky since I'm able to do what I love and
+        security. I consider myself lucky since I&apos;m able to do what I love and
         leverage my career path in this industry, even though others consider
         it. I speak several languages, Japanese (N3), English (B1), and
         Vietnamese (Native), and some are HTML, CSS, JavaScript - MERN &
@@ -27,8 +27,8 @@ const AboutMeContent = () => {
         and actually started a small Startup in E-Sport before I jumped into
         coding. However, I am glad to work on different kinds of projects for
         digital transformation society such as education, logistics, or fintech.
-        I'm transitioning myself to the Cloud and will soon take the flying
-        ticket of AWS Cloud Certificate. While I'm preparing for that, I'm
+        I&apos;m transitioning myself to the Cloud and will soon take the flying
+        ticket of AWS Cloud Certificate. While I&apos;m preparing for that, I&apos;m
         willing to work on the job taking advantage of exp to interact with AWS
         in most recent projects. I appreciate your dropping by and hope to be a
         part of your products.
